@@ -108,3 +108,74 @@ Zde jsem se rozhodl uložit vybrané skripty, které jsem v článku popisoval.
 | Keyword-bu | Keyword | Search | Index |
 |---------|------------|--------|-------|
 | letní šaty☼letní saty☼letni šaty | letní šaty | 100, 50, 10 | 0 |
+
+Nyní je dobré provést ruční kontrolu, že se všechna klíčová slova správně napárovala. Věřím, že to pro vás nebude problém, protože by tam neměla být chybka. 😊 Jestliže chcete nyní pročistit výsledný dataset, tak satačí spustit následující skript:
+
+```JSON
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Search using expression grel:forEach(value.split(','),v,v.toNumber()).sum()",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Search",
+    "expression": "grel:forEach(value.split(','),v,v.toNumber()).sum()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Index",
+    "columnName": "Index"
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Keyword-bu",
+          "expression": "isBlank(value).toString()",
+          "columnName": "Keyword-bu",
+          "invert": false,
+          "selection": [
+            {
+              "v": {
+                "v": "true",
+                "l": "true"
+              }
+            }
+          ],
+          "selectNumber": false,
+          "selectDateTime": false,
+          "selectBoolean": false,
+          "omitBlank": false,
+          "selectBlank": false,
+          "omitError": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    }
+  },
+  {
+    "op": "core/column-reorder",
+    "description": "Reorder columns",
+    "columnNames": [
+      "Keyword",
+      "Keyword-bu",
+      "Search"
+    ]
+  }
+]
+```
+
+**Výstupní data:**
+
+| Keyword | Keyword-bu | Search | 
+|---------|------------|--------|
+| letni šaty | letní šaty☼letní saty☼letni šaty | 160 |
