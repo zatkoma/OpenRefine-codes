@@ -566,3 +566,122 @@
   }
 ]
 ```
+
+### Přejmenování defaultních sloupců
+```
+[
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Keyword to Klíčové slovo",
+    "oldColumnName": "Keyword",
+    "newColumnName": "Klíčové slovo"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Google to Pozice Google",
+    "oldColumnName": "Google",
+    "newColumnName": "Pozice Google"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Result feature to Rich snippet",
+    "oldColumnName": "Result feature",
+    "newColumnName": "Rich snippet"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Number of results to Počet výsledků Google",
+    "oldColumnName": "Number of results",
+    "newColumnName": "Počet výsledků Google"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Google Landing Page to Vstupní stránka na Google",
+    "oldColumnName": "Google Landing Page",
+    "newColumnName": "Vstupní stránka na Google"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Seznam.cz to Pozice Seznam",
+    "oldColumnName": "Seznam.cz",
+    "newColumnName": "Pozice Seznam"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Seznam.cz Number of results to Počet výsledků Seznam",
+    "oldColumnName": "Seznam.cz Number of results",
+    "newColumnName": "Počet výsledků Seznam"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Seznam.cz Landing Page to Vstupní stránka na Seznam",
+    "oldColumnName": "Seznam.cz Landing Page",
+    "newColumnName": "Vstupní stránka na Seznam"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Search type",
+    "columnName": "Search type"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Best landing page - Google to \"Nejlepší\" vstupní stránka Google",
+    "oldColumnName": "Best landing page - Google",
+    "newColumnName": "\"Nejlepší\" vstupní stránka Google"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Best landing page - Seznam.cz to \"Nejlepší\" vstupní stránka Seznam",
+    "oldColumnName": "Best landing page - Seznam.cz",
+    "newColumnName": "\"Nejlepší\" vstupní stránka Seznam"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Number of Results - Google to Počet kandidátů Google",
+    "oldColumnName": "Number of Results - Google",
+    "newColumnName": "Počet kandidátů Google"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Number of Results - Seznam.cz to Počet kandidátů Seznam",
+    "oldColumnName": "Number of Results - Seznam.cz",
+    "newColumnName": "Počet kandidátů Seznam"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Google SERP Competition to Konkurenčnost Google",
+    "oldColumnName": "Google SERP Competition",
+    "newColumnName": "Konkurenčnost Google"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Seznam SERP Competition to Konkurenčnost Seznam",
+    "oldColumnName": "Seznam SERP Competition",
+    "newColumnName": "Konkurenčnost Seznam"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Google Search Volume to Hledanost Google",
+    "oldColumnName": "Google Search Volume",
+    "newColumnName": "Hledanost Google"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Google CPC to CPC Google",
+    "oldColumnName": "Google CPC",
+    "newColumnName": "CPC Google"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Sklik Search Volume to Hledanost Seznam",
+    "oldColumnName": "Sklik Search Volume",
+    "newColumnName": "Hledanost Seznam"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Sklik CPC to CPC Seznam",
+    "oldColumnName": "Sklik CPC",
+    "newColumnName": "CPC Seznam"
+  }
+]
+```
